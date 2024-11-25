@@ -30,4 +30,36 @@ object forApp2 {
   val sum = num.reduce((a, b) => a + b)
 
   println(s"add:$add, even:$even, sum:$sum")
+
+
+  //seq, set, mapについて
+  //https://qiita.com/f81@github/items/dc79819d23ce4889d552
+
+  var filtered = Seq(1, 2, 3).filter(i => i > 1)
+  println(filtered)
+
+  //seqはシークエンスの略 順序保持
+  // List > Seq
+
+  val numSeq = 1 :: 2 :: 3 :: Nil //List(1, 2, 3) NilはEmpty_List
+
+  println(num.head)
+  println(num.tail)
+  println(num.tail.head)
+  println(numSeq.tail.tail.isEmpty)
+  println(numSeq.tail.tail.tail.isEmpty)
+
+  //setは重複なし
+  val numSet = Set(1, 3, 3, 2)
+  println(numSet)
+
+  //map 重複なし
+  val col = Map(1 -> "red",
+    2 -> "blue",
+    3 -> "green",
+    4 -> 334
+  )
+  println(col(1))
+  //println(col(red)) error
+
 }
