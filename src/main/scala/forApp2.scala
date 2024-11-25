@@ -62,4 +62,6 @@ object forApp2 {
   println(col(1))
   //println(col(red)) error
 
+
+
 }
